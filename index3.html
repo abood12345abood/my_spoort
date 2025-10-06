@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY SPORT ⚽ | متجر التيشيرتات</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ======= الهيدر ======= -->
+  <header class="header">
+    <div class="logo">MY <span>SPORT</span></div>
+    <nav class="nav">
+      <a href="#saudi">الأندية السعودية</a>
+      <a href="#europe">الأندية الأوروبية</a>
+      <a href="#national">المنتخبات</a>
+    </nav>
+    <button class="mode-toggle" id="modeToggle">🌞</button>
+  </header>
+
+  <!-- ======= بانر ترحيبي ======= -->
+  <section class="hero">
+    <h1>مرحبًا بك في متجر <span>MY SPORT</span></h1>
+    <p>أفضل التيشيرتات الرياضية بجودة عالية ✨</p>
+  </section>
+
+  <!-- ======= قسم الأندية السعودية ======= -->
+  <section id="saudi" class="section">
+    <h2>🏆 الأندية السعودية</h2>
+    <div class="products">
+      <div class="card">
+        <div class="badge">الثالث مجانًا</div>
+        <div class="img-box"></div>
+        <h3>تيشيرت الهلال</h3>
+        <div class="sizes">
+          <button>S</button><button>M</button><button>L</button><button>XL</button>
+        </div>
+        <p class="price">129 ر.س</p>
+      </div>
+
+      <div class="card">
+        <div class="badge">الثالث مجانًا</div>
+        <div class="img-box"></div>
+        <h3>تيشيرت النصر</h3>
+        <div class="sizes">
+          <button>S</button><button>M</button><button>L</button><button>XL</button>
+        </div>
+        <p class="price">129 ر.س</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= قسم الأندية الأوروبية ======= -->
+  <section id="europe" class="section">
+    <h2>⚽ الأندية الأوروبية</h2>
+    <div class="products">
+      <div class="card">
+        <div class="badge">الثالث مجانًا</div>
+        <div class="img-box"></div>
+        <h3>تيشيرت ريال مدريد</h3>
+        <div class="sizes">
+          <button>S</button><button>M</button><button>L</button><button>XL</button>
+        </div>
+        <p class="price">149 ر.س</p>
+      </div>
+
+      <div class="card">
+        <div class="badge">الثالث مجانًا</div>
+        <div class="img-box"></div>
+        <h3>تيشيرت برشلونة</h3>
+        <div class="sizes">
+          <button>S</button><button>M</button><button>L</button><button>XL</button>
+        </div>
+        <p class="price">149 ر.س</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= قسم المنتخبات ======= -->
+  <section id="national" class="section">
+    <h2>🌍 المنتخبات</h2>
+    <div class="products">
+      <div class="card">
+        <div class="badge">الثالث مجانًا</div>
+        <div class="img-box"></div>
+        <h3>تيشيرت المنتخب السعودي</h3>
+        <div class="sizes">
+          <button>S</button><button>M</button><button>L</button><button>XL</button>
+        </div>
+        <p class="price">139 ر.س</p>
+      </div>
+
+      <div class="card">
+        <div class="badge">الثالث مجانًا</div>
+        <div class="img-box"></div>
+        <h3>تيشيرت الأرجنتين</h3>
+        <div class="sizes">
+          <button>S</button><button>M</button><button>L</button><button>XL</button>
+        </div>
+        <p class="price">139 ر.س</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= فوتر ======= -->
+  <footer class="footer">
+    <p>© 2025 MY SPORT | جميع الحقوق محفوظة ⚡</p>
+    <div class="footer-links">
+      <a href="#saudi">الأندية السعودية</a> •
+      <a href="#europe">الأندية الأوروبية</a> •
+      <a href="#national">المنتخبات</a>
+    </div>
+  </footer>
+
+  <!-- زر واتساب -->
+  <a href="https://wa.me/967770215380" class="whatsapp" target="_blank" title="تواصل عبر واتساب">
+    💬
+  </a>
+
+  <!-- سكربت الوضع الليلي -->
+  <script>
+    const toggle = document.getElementById("modeToggle");
+    const body = document.body;
+
+    // تحميل الوضع المحفوظ
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark");
+      toggle.textContent = "🌙";
+    }
+
+    toggle.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      const isDark = body.classList.contains("dark");
+      toggle.textContent = isDark ? "🌙" : "🌞";
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+  </script>
+</body>
+</html>
